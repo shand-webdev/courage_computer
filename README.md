@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# courage-s_computer
+Inspired by Courage the Cowardly Dog, I built a chat system mimicking Courage’s paranoid computer, powered by Gemini. It answers sarcastically, types like an old cartoon AI, and mimics the series’ eerie humor.
+>>>>>>> 43bc7349bf8b97e055f3cf743e500593833dae24
