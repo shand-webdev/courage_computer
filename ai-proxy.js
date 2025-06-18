@@ -1,12 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
+require('dotenv').config();
+
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-const GEMINI_API_KEY = 'AIzaSyCz5MXTcxOVhEOze1qgySrEENX2xVkJqx0'; // Your actual key here
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 app.post('/api/ask', async (req, res) => {
   const { question } = req.body;
