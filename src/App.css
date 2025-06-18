@@ -1,38 +1,124 @@
-.App {
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: #1a2223;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 2rem 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.terminal {
+  background: linear-gradient(135deg, #69a18e 78%, #4fa087 100%);
+  border: 5px solid #356e5b;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 40px #68b49380 inset, 0 0 14px #297b6380, 0 8px 40px #143227c7;
+  max-width: 550px;
+  width: 98vw;
+  min-height: 400px;
+  margin: 2.5rem auto;
+  padding: 2rem 1.2rem 2.5rem 1.2rem;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.terminal::before {
+  /* Glass shine effect */
+  content: "";
+  position: absolute;
+  top: 1.6rem;
+  left: 1.2rem;
+  width: 90px;
+  height: 36px;
+  background: linear-gradient(120deg, #fff 45%, transparent 100%);
+  opacity: 0.18;
+  border-radius: 60% 70% 60% 80% / 70% 80% 60% 60%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.block {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.question {
+  color: #d2e900;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.09rem;
+  margin-bottom: 0.12rem;
+  text-align: left;
+}
+
+.answer {
+  color: #fffcc5;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  margin-top: 0.1rem;
+  text-align: left;
+}
+
+.input-box {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto 0 auto;
+  width: 100%;
+  max-width: 430px;
+}
+
+input, button {
+  background: #213d35;
+  color: #d5ecd5;
+  border: 2px solid #ffffff;
+  padding: 1rem;
+  font-size: 1.08rem;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: #355f49;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #41ff41;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #488d65;
+  color: #e6ffe6;
+}
+
+.fade {
+  animation: fadein 0.8s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 600px) {
+  .terminal {
+    padding: 1rem 0.3rem 1.3rem 0.3rem;
+    min-height: 220px;
   }
-  to {
-    transform: rotate(360deg);
+  .input-box {
+    width: 98vw;
+    max-width: 98vw;
+  }
+  .question, .answer {
+    font-size: 1.01rem;
   }
 }
