@@ -5,6 +5,8 @@ Features a CRT green “glass” screen, typewriter animation, sarcastic AI answ
 
 ![Screenshot](./screenshot.jpeg)
 
+![Screenshot](./ss2.jpeg)
+
 
 ---
 
